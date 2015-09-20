@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load pages_tags %}
+
+{% block main %}
+<script>
+$(document).ready(function(){
+    $('.fixed-navbar')
+    .addClass('nebula-cover')
+    .removeClass('navbar-inverse');
+    $('.nebula-jumbotron')
+    .removeClass('hidden');
+    $('.page')
+    .removeClass('container');
+    $('#dropdown-menu-home').addClass('hidden');
+    $('.navbar-brand').addClass('hidden');
+});
+</script>
+{% with has_home=True %}
+<div class="hidden">{{has_home}}</div>
+{% endwith %}
+<div style="text-align:center;">
+    <div class="row">
+	<div class="col-md-offset-1 col-md-5 col-sm-6 text-right">
+                <h1>Entenda o Coworking</h1>
+                <p style="font-size: 1.2em; line-height: 1.5em;">No Coworking, profissionais de diversas &aacute;reas, freelancers, pequenas empresas, empreendedores individuais, arquitetos, jornalistas, advogados, designers ou qualquer pessoa que se identifique com a ideia de trabalhar em um ambiente criativo, passa a compartilhar o mesmo escrit&oacute;rio e se beneficiar com o uso comum da infraestrutura, diminuindo seus custos. O resultado &eacute; uma comunidade viva, onde os profissionais podem compartilhar e trabalhar de uma forma diferente.</p>
+        </div>
+            <div class="col-md-5 col-sm-6 text-left">
+		<br>
+                <p><iframe width="100%" height="300" src="http://www.youtube.com/embed/BEhubwgjl6s" frameborder="0"></iframe></p>
+            </div>
+    </div>
+    <p><br/><br/></p>
+    <div class="row">
+  	      <div class="col-md-3 col-sm-6" style="background-color:white;">
+		<div href="#" class="black">
+		    <img src="{% static "svg/clock.svg" %}" width="60%"/>
+		    <br><br>
+		    <h2>Aberto toda hora</h2>
+		    <p style="font-size:1.2em">Somos o primeiro espaço coletivo disponível por 24 horas o dia, 7 dias a semana do Rio Grande do Sul. Venha nos conhecer! Marque uma visita e veremos o que temos de possibilidade.</p><br>
+		</div>
+	      </div>
+	      <div class="col-md-3 col-sm-6" style="background-color:white;">
+		<div href="#" class="black">
+		    <img src="{% static "svg/pig.svg" %}" width="60%"/>
+		    <br><br>
+		    <h2>Retorno Financeiro</h2>
+		    <p style="font-size:1.2em">Na Fábrica de Ideias nós flexibilizamos e apoiamos todo tipo de negócio, sempre com o objetivo de que nossos membros obtenham o seu retorno financeiro.</p><br>
+		</div>
+	      </div>
+	      <div class="col-md-3 col-sm-6" style="background-color:white;">
+		<div href="#" class="black">
+		    <img src="{% static "svg/house.svg" %}" width="60%"/>
+		    <br><br>
+		    <h2>Boa Estrutura</h2>
+		    <p style="font-size:1.2em">A Fábrica fica localizada bem no coração da cidade de Porto Alegre, bem fácil de acessar e de receber nossos membros num ambiente completamente preparado para negócios.</p><br>
+		</div>
+	      </div>
+	      <div class="col-md-3 col-sm-6" style="background-color:white;">
+		<div href="#" class="black">
+		    <img src="{% static "svg/idea.svg" %}" width="60%"/>
+		    <br><br>
+		    <h2>Ponto das Ideias</h2>
+		    <p style="font-size:1.2em">O espaço é aberto para criação de negócios e produtos, especialmente de base tecnológica, contando com parceiros e estrutura para desenvolvimento.</p><br>
+		</div>
+	      </div>
+    </div>
+    <div class="row">
+	    <div class="col-md-2"></div>
+	    <div class="col-md-8" style="padding:3%">
+	    <h2 style="font-size:3em; line-height:1.2em;">O que está esperando para conhecer a Fábrica?</h2>
+	    <p style="font-size:1.5em; line-height:1.2em;">Converse com a gente por <a href="mailto:oi@fabricadeideiascw.com.br">oi@fabricadeideiascw.com.br</a> e marque uma visita. Vamos recebê-lo com um bom café, chá ou chimarrão.</p>
+	    </div>
+	    <div class="col-md-2"></div>
+    </div>
+</div>
+{% endblock %}
