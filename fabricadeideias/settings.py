@@ -199,7 +199,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_APP
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "app/public"),
+    os.path.join(BASE_DIR, "fabricadeideias/public"),
 ]
 
 ################
@@ -224,7 +224,6 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    "app",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
 )
