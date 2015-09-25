@@ -17,6 +17,8 @@ RUN locale-gen
 
 RUN pip install --no-cache-dir -r requirements.txt
 RUN python manage.py collectstatic --noinput
+
+RUN psql -U postgres -h db -c "create database fabrica;"
 RUN python manage.py migrate --noinput
 
 EXPOSE 8081
