@@ -16,10 +16,10 @@ RUN echo "pt_BR.UTF-8 UTF-8" >> /etc/locale.gen
 RUN locale-gen
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinput --settings="fabricadeideias.production"
 
 RUN psql -U postgres -h db -c "create database fabrica;"
-RUN python manage.py migrate --noinput
+RUN python manage.py migrate --noinput --settings="fabricadeideias.production"
 
 EXPOSE 8081
 CMD ["apache2ctl", "-D", "FOREGROUND"]
