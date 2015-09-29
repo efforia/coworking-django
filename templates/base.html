@@ -20,7 +20,7 @@
     background-attachment:fixed;
 }
 </style>
-<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} {{ settings.SITE_TITLE }}{% endif %}</title>
+<title>Fábrica de Ideias Coworking</title>
 <link rel="shortcut icon" href="{% static "img/fabricalogo.png" %}">
 
 {% ifinstalled mezzanine.blog %}
@@ -75,7 +75,15 @@
     </a>
 </div>
 <div class="navbar-collapse collapse" style="border:none; box-shadow:none;">
-    {% page_menu "pages/menus/dropdown.html" %}
+  <ul class="nav navbar-nav navbar-center">
+    <li><a class="nav-white" href="#">{% trans "Fábrica" %}</a></li>
+    <!--<li><a class="nav-white" href="#">{% trans "Coworkers" %}</a></li>!-->
+    <li><a class="nav-white" href="#">{% trans "Photos" %}</a></li>
+    <li><a class="nav-white" href="#">{% trans "Pricing" %}</a></li>
+    <li><a class="nav-white" href="#">{% trans "Agenda" %}</a></li>
+    <li><a class="nav-white" href="#">{% trans "About" %}</a></li>
+  </ul>
+  {% page_menu "pages/menus/dropdown.html" %}
 </div>
 </div>
 <div class="nebula-jumbotron hidden">

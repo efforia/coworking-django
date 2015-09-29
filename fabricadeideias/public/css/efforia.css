@@ -3,10 +3,10 @@ html,body
     width: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
-body { 
-	font-family:Roboto; 
+body {
+	font-family:Roboto;
 	background:#222222;
 }
 h1,h2,h3,h4,h5,h6,ul.nav { font-family: Roboto; font-weight:bold; text-transform:uppercase; }
@@ -27,15 +27,27 @@ a,a:hover,a:active,a:focus { text-decoration:none !important; }
 
 .input_id_card_pay_option_0 { display:none; }
 .fixed-navbar {
-	border:0px; 
-	border-radius:0px; 
+	border:0px;
+	border-radius:0px;
 	padding:0px;
-	margin-bottom:0px; 
+	margin-bottom:0px;
 }
 .nebula-jumbotron {
-	text-align:center; 
-	color:white; 
+	text-align:center;
+	color:white;
 	padding:2em 0em;
+}
+
+.navbar-center {
+  float:none;
+  margin: 0 auto;
+  display:table;
+  table-layout:fixed;
+}
+
+.nav-white {
+  color:white !important;
+  font-size:1.5em;
 }
 
 #inner{ background:white; }
