@@ -44,6 +44,7 @@ urlpatterns += patterns('',
     url("^coworking/", direct_to_template, {"template": "coworking.html"}, name="coworking"),
     url("^fotos/", direct_to_template, {"template": "photos.html"}, name="photos"),
     url("^planos/", direct_to_template, {"template": "pricing.html"}, name="pricing"),
+    url("^servicos/", direct_to_template, {"template": "services.html"}, name="services"),
     url("^agenda/", direct_to_template, {"template": "agenda.html"}, name="agenda"),
     url("^sobre/", direct_to_template, {"template": "about.html"}, name="about"),
 

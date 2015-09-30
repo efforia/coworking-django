@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-30 16:17+0000\n"
+"POT-Creation-Date: 2015-09-30 20:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: coworking/production.py:120 coworking/settings.py:112
-#: fabricadeideias/settings.py:119
 msgid "English"
 msgstr ""
 
 #: coworking/production.py:121 coworking/settings.py:111
-#: fabricadeideias/settings.py:120
 msgid "Portuguese"
 msgstr ""
 
@@ -35,15 +33,40 @@ msgstr ""
 msgid "Toggle Navigation"
 msgstr ""
 
-#: templates/base.html:158
+#: templates/base.html:159 templates/pages/menus/dropdown.html:12
+msgid "Fábrica"
+msgstr ""
+
+#: templates/base.html:164 templates/pages/menus/dropdown.html:14
+msgid "Photos"
+msgstr ""
+
+#: templates/base.html:169 templates/pages/menus/dropdown.html:15
+msgid "Pricing"
+msgstr ""
+
+#: templates/base.html:174 templates/pages/menus/dropdown.html:17
+msgid "Agenda"
+msgstr ""
+
+#: templates/base.html:179 templates/blog/blog_post_list.html:4
+#: templates/blog/blog_post_list.html:22
+msgid "Blog"
+msgstr ""
+
+#: templates/base.html:184 templates/pages/menus/dropdown.html:18
+msgid "About"
+msgstr ""
+
+#: templates/base.html:191
 msgid "Powered by"
 msgstr ""
 
-#: templates/base.html:161
+#: templates/base.html:194
 msgid "and"
 msgstr ""
 
-#: templates/base.html:171
+#: templates/base.html:204
 msgid "View Mobile Site"
 msgstr ""
 
@@ -126,10 +149,6 @@ msgstr ""
 
 #: templates/blog/blog_post_detail.html:119
 msgid "Related posts"
-msgstr ""
-
-#: templates/blog/blog_post_list.html:4 templates/blog/blog_post_list.html:22
-msgid "Blog"
 msgstr ""
 
 #: templates/blog/blog_post_list.html:31
@@ -317,28 +336,12 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: templates/pages/menus/dropdown.html:12
-msgid "Fábrica"
-msgstr ""
-
 #: templates/pages/menus/dropdown.html:13
 msgid "Coworkers"
 msgstr ""
 
-#: templates/pages/menus/dropdown.html:14
-msgid "Photos"
-msgstr ""
-
-#: templates/pages/menus/dropdown.html:15
-msgid "Pricing"
-msgstr ""
-
 #: templates/pages/menus/dropdown.html:16
-msgid "Agenda"
-msgstr ""
-
-#: templates/pages/menus/dropdown.html:17
-msgid "About"
+msgid "Services"
 msgstr ""
 
 #: templates/twitter/tweets.html:7
