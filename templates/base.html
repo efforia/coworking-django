@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+<html lang="pt-br">
+<!--<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>!-->
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 
 <head>
@@ -20,7 +21,7 @@
     background-attachment:fixed;
 }
 </style>
-<title>Fábrica de Ideias Coworking</title>
+<title> {% trans "Idea Factory" %} Coworking</title>
 <link rel="shortcut icon" href="{% static "img/fabricalogo.png" %}">
 
 {% ifinstalled mezzanine.blog %}
@@ -75,14 +76,6 @@
     </a>
 </div>
 <div class="navbar-collapse collapse" style="border:none; box-shadow:none;">
-  <ul class="nav navbar-nav navbar-center">
-    <li><a class="nav-white" href="{% url 'coworking' %}" >{% trans "Fábrica" %}</a></li>
-    <!--<li><a class="nav-white" href="#">{% trans "Coworkers" %}</a></li>!-->
-    <li><a class="nav-white" href="{% url 'photos' %}" >{% trans "Photos" %}</a></li>
-    <li><a class="nav-white" href="{% url 'pricing' %}">{% trans "Pricing" %}</a></li>
-    <li><a class="nav-white" href="{% url 'agenda' %}">{% trans "Agenda" %}</a></li>
-    <li><a class="nav-white" href="{% url 'about' %}">{% trans "About" %}</a></li>
-  </ul>
   {% page_menu "pages/menus/dropdown.html" %}
 </div>
 </div>

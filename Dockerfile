@@ -22,7 +22,7 @@ RUN chown -R www-data:www-data /var/www/fabricadeideias/static
 RUN chmod -R 775 /var/www/fabricadeideias/static
 
 RUN psql -U postgres -h db -c "create database fabrica;"
-RUN python manage.py migrate --noinput --settings="fabricadeideias.production"
+RUN python manage.py syncdb --noinput --settings="fabricadeideias.production"
 
 EXPOSE 8081
 CMD ["apache2ctl", "-D", "FOREGROUND"]

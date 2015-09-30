@@ -106,14 +106,15 @@ TIME_ZONE = 'UTC'
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
 
-# Language code for this installation. All choices can be found here:
-# http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en"
-
 # Supported languages
 LANGUAGES = (
-    ('en', _('English')),
+    ('pt', _('Portuguese')),
+    ('en', _('English'))
 )
+
+# Language code for this installation. All choices can be found here:
+# http://www.i18nguy.com/unicode/language-identifiers.html
+LANGUAGE_CODE = "pt-br"
 
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
@@ -127,7 +128,9 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
+
+USE_L10N = True
 
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 
@@ -166,6 +169,7 @@ DATABASES = {
 PROJECT_APP_PATH = os.path.dirname(os.path.abspath(__file__))
 PROJECT_APP = os.path.basename(PROJECT_APP_PATH)
 PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
+PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
 
 # Every cache key will get prefixed with this value - here we set it to
 # the name of the directory the project is in to try and use something
@@ -201,7 +205,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_APP
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "fabricadeideias/public"),
+    os.path.join(BASE_DIR, "coworking/public"),
 ]
 
 ################
@@ -226,6 +230,7 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.galleries",
     "mezzanine.twitter",
+    "coworking"
     # "mezzanine.accounts",
     # "mezzanine.mobile",
 )
@@ -254,11 +259,11 @@ MIDDLEWARE_CLASSES = (
 
     'django.contrib.sessions.middleware.SessionMiddleware',
     # Uncomment if using internationalisation or localisation
-    # 'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    #'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 

@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load pages_tags %}
+
+{% block main %}
+
+<div class="row">
+  <div class="col-md-12 middle">
+    <h1 style="text-align: center;">Para usar a Fábrica de Ideias Coworking {% trans "it's easy" %}:</h1>
+    <p>Basta selecionar o plano que mais se encaixa com você, marcar uma visita conosco e fecharmos o contrato. Simples, fácil e prático, como um ambiente empreendedor deve de proporcionar. Temos planos para todas as necessidades das pessoas que nos buscam:</p>
+    <div class="row">
+      <div class="col-md-3 col-sm-3">
+        <h2 style="text-align: center;">Meio Turno</h2>
+        <div style="color: #4373b9;">
+          <h1 style="text-align: center; margin: 0;">160,00</h1>
+          <h3 style="text-align: center; margin: 0;">R$/mês</h3>
+        </div>
+        <h2></h2>
+        <div style="text-align: center;"><form action="https://pagseguro.uol.com.br/v2/pre-approvals/request.html" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="code" value="65B419970606969004562F9C7154AE1B" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/assinaturas/205x30-contratar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form></div>
+        <ul>
+          <li><span style="line-height: 1.5em;">Contrato mensal<br></span></li>
+          <li><span style="line-height: 1.5em;">Apoio para negócio</span></li>
+          <li><span style="line-height: 1.5em;">Acesso para Fábrica de Ideias Lab</span></li>
+          <li><span style="line-height: 1.5em;">Uso do Coworking para atendimento<br></span></li>
+          <li><span style="line-height: 1.5em;">Acesso a rede de parceiros da Fábrica</span></li>
+          <li><span style="line-height: 1.5em;">Coworking em meio-turno durante horário comercial</span></li>
+          <li><span style="line-height: 1.5em;">Uso de endereço comercial e correspondências</span></li>
+          <li><span style="line-height: 1.5em;">Valor de um mês por pessoa</span></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <h2 style="text-align: center;">Turno Completo</h2>
+        <div style="color: #2faa49;">
+          <h1 style="text-align: center; margin: 0;">250,00</h1>
+          <h3 style="text-align: center; margin: 0;">R$/mês</h3>
+        </div>
+        <h2></h2>
+        <div style="text-align: center;"><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/v2/pre-approvals/request.html" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="code" value="89DE96298383DF3FF4C38F93DAFA4309" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/assinaturas/205x30-contratar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></div>
+        <ul>
+          <li><span style="line-height: 1.5em;">Contrato mensal</span></li>
+          <li><span style="line-height: 1.5em;">Apoio para negócio</span></li>
+          <li><span style="line-height: 1.5em;">Acesso para a Fábrica de Ideias Lab</span></li>
+          <li><span style="line-height: 1.5em;">Uso do Coworking para reunião ou atendimento<br></span></li>
+          <li><span style="line-height: 1.5em;">Acesso a rede de parceiros da Fábrica<br></span></li>
+          <li><span style="line-height: 1.5em;">Coworking liberado em horário comercial<br></span></li>
+          <li><span style="line-height: 1.5em;">Uso de endereço comercial e correspondências<br></span></li>
+          <li><span style="line-height: 1.5em;">Valor de um mês por pessoa</span></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <h2 style="text-align: center;">Turno Integral</h2>
+        <div style="color: #583494;">
+          <h1 style="text-align: center; margin: 0;">360,00</h1>
+          <h3 style="text-align: center; margin: 0;">R$/mês</h3>
+        </div>
+        <h2></h2>
+        <div style="text-align: center;"><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/v2/pre-approvals/request.html" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="code" value="0527C19D74749C4994D08FBA9960ED0C" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/assinaturas/205x30-contratar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></div>
+        <ul>
+          <li><span style="line-height: 1.5em;">Contrato mensal</span></li>
+          <li><span style="line-height: 1.5em;">Apoio para negócio</span></li>
+          <li><span style="line-height: 1.5em;">Acesso a Fábrica de Ideias Lab</span></li>
+          <li><span style="line-height: 1.5em;">Uso do Coworking para atendimento ou reunião<br></span></li>
+          <li><span style="line-height: 1.5em;">Acesso a rede de parceiros da Fábrica<br></span></li>
+          <li><span style="line-height: 1.5em;">Coworking liberado com acesso a chaves</span></li>
+          <li><span style="line-height: 1.5em;"></span>Uso de endereço comercial e correspondências</li>
+          <li><span style="line-height: 1.5em;">Valor de um mês por pessoa</span></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <h2 style="text-align: center;">Noturno</h2>
+        <div style="color: #eb4736;">
+          <h1 style="text-align: center; margin: 0;">270,00</h1>
+          <h3 style="text-align: center; margin: 0;">R$/mês</h3>
+        </div>
+        <h2></h2>
+        <div style="text-align: center;"><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/v2/pre-approvals/request.html" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="code" value="880034829090D593346F4F8FBEB3B644" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/assinaturas/205x30-contratar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></div>
+        <ul>
+          <li><span style="line-height: 1.5em;">Contrato mensal para uso noturno exclusivo</span></li>
+          <li><span style="line-height: 1.5em;">Apoio para negócio</span></li>
+          <li><span style="line-height: 1.5em;">Acesso a Fábrica de Ideias Lab</span></li>
+          <li><span style="line-height: 1.5em;">Uso do Coworking para atendimento ou reunião<br></span></li>
+          <li><span style="line-height: 1.5em;">Acesso a rede de parceiros da Fábrica<br></span></li>
+          <li><span style="line-height: 1.5em;">Coworking liberado para fora do horário com acesso a chaves</span></li>
+          <li><span style="line-height: 1.5em;"></span>Uso de endereço comercial e correspondências</li>
+          <li><span style="line-height: 1.5em;">Valor de um mês por pessoa</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 style="text-align: right;">Locação Avulsa do Coworking</h2>
+      <p style="text-align: right;">Está precisando de um lugar para de vez em quando para trabalhar durante um turno? A Fábrica de Ideias tem para você pacotes de horas renováveis de mês a mês e compartilháveis (cada um utiliza uma hora), caso ainda não seja membro da Fábrica. Usuários dos planos semestrais tem preço especial para realizar eventos, cursos e oficinas pelo Fábrica de Ideias Lab. Para saber mais sobre estes valores, contate-nos por oi@fabricadeideiascw.com.br.</p>
+      <p style="text-align: right;">Tem interesse em realizar eventos, reuniões ou atendimentos na Fábrica de Ideias e ainda não é mensalista? Temos o preço especial de <strong> R$ 50,00/h </strong> para locar nosso espaço fora do horário comercial (9h às 19h), e <strong> R$ 25,00/h </strong> dentro do horário comercial, para qualquer quantidade de pessoas e qualquer horário. Faça sua próxima palestra, oficina ou curso na Fábrica de Ideias Coworking!</p>
+      <p style="text-align: right;"></p>
+    </div>
+    <div class="col-md-6">
+      <h2>Pacotes de Horas:</h2>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Quantidade de horas</td>
+            <td>Valor do pacote por pessoa</td>
+            <td>Valor por hora</td>
+            <td>Opções</td>
+          </tr>
+          <tr>
+            <td>1h noturna</td>
+            <td>R$ 12,00</td>
+            <td>R$ 12,00/h</td>
+            <td><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="itemCode" value="7999627DBDBD589444028FB975DEF612" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/84x35-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></td>
+          </tr>
+          <tr>
+            <td>1h</td>
+            <td>R$ 6,00</td>
+            <td>R$ 6,00/h</td>
+            <td><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="itemCode" value="8ED85B60A0A066F334A95FB5CCF5D600" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/84x35-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></td>
+          </tr>
+          <tr>
+            <td>10h</td>
+            <td>R$ 50,00</td>
+            <td>R$ 5,00/h</td>
+            <td><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="itemCode" value="C32CD82F2626EDF884CF3F8B38E198B0" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/84x35-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></td>
+          </tr>
+          <tr>
+            <td>50h</td>
+            <td>R$ 120,00</td>
+            <td>R$ 2,40/h</td>
+            <td><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="itemCode" value="72F6A05C62628E0AA4F32F9B9134BF6A" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/84x35-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></td>
+          </tr>
+          <tr>
+            <td>100h</td>
+            <td>R$ 160,00</td>
+            <td>R$ 1,60/h</td>
+            <td><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="itemCode" value="416190649595471884F5AF81407D3EE9" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/84x35-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></td>
+          </tr>
+          <tr>
+            <td>200h</td>
+            <td>R$ 250,00</td>
+            <td>R$ 1,25/h</td>
+            <td><!-- INICIO FORMULARIO BOTAO PAGSEGURO --><form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post"><!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --> <input name="itemCode" value="C7561BF23D3D4B4114DDFF8A940E0B0D" type="hidden"> <input src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/84x35-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" type="image"></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO --></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="text-align: center;">Disponibilidade do espaço para organizar eventos, oficinas, cursos e palestras no Lab, ou utilizar o Coworking dependem de agendamento prévio, valendo para todos planos.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

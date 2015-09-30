@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.conf.urls import patterns, include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
+from django.views.generic.base import TemplateView
 
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
@@ -36,7 +37,8 @@ urlpatterns += patterns('',
     # one homepage pattern, so if you use a different one, comment this
     # one out.
 
-    url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    #url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    url("^$", TemplateView.as_view(template_name="index.html"), name="home"),
 
     # STATIC TEMPLATE PAGES
 
