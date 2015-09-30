@@ -106,20 +106,15 @@ TIME_ZONE = 'UTC'
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
 
-LOCALE_PATHS = (
-    'conf/locale',
-    'coworking/locale',
+# Supported languages
+LANGUAGES = (
+    ('pt-br', _('Portuguese')),
+    ('en', _('English'))
 )
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = "pt-br"
-
-# Supported languages
-LANGUAGES = (
-    ('en', _('English')),
-    ('pt', _('Portuguese'))
-)
 
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
@@ -133,7 +128,7 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
 
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 
@@ -205,7 +200,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_APP
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "fabricadeideias/public"),
+    os.path.join(BASE_DIR, "coworking/public"),
 ]
 
 ################

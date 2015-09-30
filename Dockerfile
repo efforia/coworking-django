@@ -17,12 +17,12 @@ RUN echo "pt_BR.UTF-8 UTF-8" >> /etc/locale.gen
 RUN locale-gen
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python manage.py collectstatic --noinput --settings="fabricadeideias.production"
+RUN python manage.py collectstatic --noinput --settings="coworking.production"
 RUN chown -R www-data:www-data /var/www/fabricadeideias/static
 RUN chmod -R 775 /var/www/fabricadeideias/static
 
 RUN psql -U postgres -h db -c "create database fabrica;"
-RUN python manage.py syncdb --noinput --settings="fabricadeideias.production"
+RUN python manage.py syncdb --noinput --settings="coworking.production"
 
 EXPOSE 8081
 CMD ["apache2ctl", "-D", "FOREGROUND"]
