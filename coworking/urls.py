@@ -8,7 +8,6 @@ from django.views.generic.base import TemplateView
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 
-
 admin.autodiscover()
 
 # Add the urlpatterns for any custom Django applications here.
