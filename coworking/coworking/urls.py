@@ -39,6 +39,15 @@ urlpatterns += [
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 
+    # STATIC TEMPLATE PAGES
+
+    url(r'^coworking/', direct_to_template, {"template": "coworking.html"}, name="coworking"),
+    url(r'^fotos/', direct_to_template, {"template": "photos.html"}, name="photos"),
+    url(r'^planos/', direct_to_template, {"template": "pricing.html"}, name="pricing"),
+    url(r'^servicos/', direct_to_template, {"template": "services.html"}, name="services"),
+    url(r'^agenda/', direct_to_template, {"template": "agenda.html"}, name="agenda"),
+    url(r'^sobre/', direct_to_template, {"template": "about.html"}, name="about"),
+
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
     # This pattern gives us a normal ``Page`` object, so that your
