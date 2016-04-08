@@ -43,10 +43,13 @@ a,a:hover,a:active,a:focus { text-decoration:none !important; }
   height:100%;
   margin:0;
   display:flex;
-  color:white !important;
-  background:rgba(0,0,0,0.75);
   text-align:center;
   align-items:center;
+}
+
+.overlay {
+  color:white !important;
+  background:rgba(0,0,0,0.75);
 }
 
 .full { background-size: cover;}
