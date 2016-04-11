@@ -14,7 +14,7 @@
 @font-face { font-family: 'Roboto'; src: url("{% static "ttf/roboto.ttf" %}"); }
 @font-face { font-family: 'Roboto'; src: url("{% static "ttf/odinrounded.otf" %}"); font-weight: bold; }
 
-.nebula-cover {
+.nebula {
     background-image:url("{% static "svg/diffuse.svg" %}");
     background-size:cover;
     background-repeat:no-repeat;
@@ -34,116 +34,93 @@
 {% block extra_head %}{% endblock %}
 </head>
 
-<body id="{% block body_id %}body{% endblock %}" class="full" style="padding:0px;">
-<div id="outer">
-  <div class="navbar navbar-default navbar-inverse fixed-navbar overlay" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">{% trans "Toggle Navigation" %}</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" style="padding:10px; font-size:1.5em" href="/">
-          <img src="{% static "svg/fabricalogo.svg" %}" style="display:inline; height:1.5em; align:middle;"/>
-        </a>
-      </div>
-      <div class="navbar-collapse collapse" style="border:none; box-shadow:none;">
-        <ul class="nav navbar-nav" style="float:none; margin: 0 auto; display:table; table-layout:fixed;">
-          <li><a class="nav-white" href="{% url 'coworking' %}" >{% trans "Fábrica" %}</a></li>
-          <!--<li><a class="nav-white" href="#">{% trans "Coworkers" %}</a></li>!-->
-          <li><a class="nav-white" href="{% url 'photos' %}" >{% trans "Photos" %}</a></li>
-          <li><a class="nav-white" href="{% url 'pricing' %}">{% trans "Pricing" %}</a></li>
-          <li><a class="nav-white" href="{% url 'services' %}">{% trans "Services" %}</a></li>
-          <li><a class="nav-white" href="{% url 'agenda' %}">{% trans "Agenda" %}</a></li>
-          <li><a class="nav-white" href="{% url 'about' %}">{% trans "About" %}</a></li>
-        </ul>
-        {% page_menu "pages/menus/dropdown.html" %}
-      </div>
+<body class="full nebula">
+
+<div class="navbar overlay navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">{% trans "Toggle Navigation" %}</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="padding:10px; font-size:1.5em" href="/">
+        <img src="{% static "svg/fabricalogo.svg" %}" style="display:inline; height:1.5em; align:middle;"/>
+      </a>
     </div>
-    <div class="jumbotron overlay hidden">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-12">
-  	         <img src="{% static "svg/fabrica.svg" %}" class="img-responsive" style="margin:0 auto;"/>
-           </div>
-         </div>
-         <div class="row" style="padding:2% 0%;">
-           <div class="col-md-8 col-md-offset-2">
-  	          <h2 style="font-size:1.5em; line-height:1.2em;">
-             Somos um ambiente coletivo acolhedor, pensado todo em receber
-             você como se estivesse na sua casa.<br></h2>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
-<div id="inner">
-<div class="container">
-<h1 class="centered">{% block title %}{% endblock %}</h1>
-
-</div>
-<div class="container page">
-<div class="row">
-
-<div class="col-md-12 middle">
-    {% block main %}{% endblock %}
+    <div class="navbar-collapse collapse" style="border:none; box-shadow:none;">
+      <ul class="nav navbar-nav" style="float:none; margin: 0 auto; display:table; table-layout:fixed;">
+        <li><a href="{% url 'coworking' %}"> {% trans "Fábrica" %}  </a></li>
+        <li><a href="{% url 'photos' %}">    {% trans "Photos" %}   </a></li>
+        <li><a href="{% url 'pricing' %}">   {% trans "Pricing" %}  </a></li>
+        <li><a href="{% url 'services' %}">  {% trans "Services" %} </a></li>
+        <li><a href="{% url 'agenda' %}">    {% trans "Agenda" %}   </a></li>
+        <li><a href="{% url 'about' %}">     {% trans "About" %}    </a></li>
+      </ul>
+      {% page_menu "pages/menus/dropdown.html" %}
+    </div>
+  </div>
 </div>
 
+<div class="jumbotron hidden">
+  <div class="container text-center">
+    <img src="{% static "svg/fabrica.svg" %}" class="img-responsive" style="margin:0 auto;"/>
+    <h2 style="font-size:1.5em; line-height:1.2em; padding-top:1em;">
+      Somos um ambiente coletivo acolhedor, pensado todo em receber
+      você como se estivesse na sua casa.<br></h2>
+  </div>
 </div>
-</div>
+
+<div class="container-fluid whitespace page"> {% block main %}{% endblock %} </div>
 
 <footer class="footer">
-<div class="container">
+ <div class="container">
+   <div class="nav-footer">
+    <ul class="list-unstyled">
+      <li id="footer-menu-coworking"><a href="#">{% trans "Coworking" %}</a></li>
+      <li id="footer-menu-lab"><a href="http://lab.fabricadeideiascw.com.br">{% trans "Lab" %}</a></li>
+      <li id="footer-menu-hub"><a href="http://hub.fabricadeideiascw.com.br">{% trans "Hub" %}</a></li>
+    </ul>
+    <ul class="list-unstyled">
+      <li id="footer-menu-fotos">
+        <a href="#">{% trans "Photos" %}</a>
+      </li>
+    </ul>
+    <ul class="list-unstyled">
+      <li id="footer-menu-precos"><a href="#">{% trans "Pricing" %}</a></li>
+      <li id="footer-menu-servicos"><a href="#">{% trans "Services" %}</a></li>
+    </ul>
+    <ul class="list-unstyled">
+      <li id="footer-menu-agenda">
+        <a href="#">{% trans "Agenda" %}</a>
+      </li>
+    </ul>
+    <ul class="list-unstyled">
+      <li id="footer-menu-blog">
+        <a href="/blog/">{% trans "Blog" %}</a>
+      </li>
+    </ul>
+    <ul class="list-unstyled">
+      <li id="footer-menu-contate">
+        <a href="#">{% trans "About" %}</a>
+      </li>
+    </ul>
+  </div>
 
-<div class="nav-footer">
-  <ul class="list-unstyled">
-    <li id="footer-menu-coworking"><a href="#">{% trans "Coworking" %}</a></li>
-    <li id="footer-menu-lab"><a href="http://lab.fabricadeideiascw.com.br">{% trans "Lab" %}</a></li>
-    <li id="footer-menu-hub"><a href="http://hub.fabricadeideiascw.com.br">{% trans "Hub" %}</a></li>
-  </ul>
-  <ul class="list-unstyled">
-    <li id="footer-menu-fotos">
-      <a href="#">{% trans "Photos" %}</a>
-    </li>
-  </ul>
-  <ul class="list-unstyled">
-    <li id="footer-menu-precos"><a href="#">{% trans "Pricing" %}</a></li>
-    <li id="footer-menu-servicos"><a href="#">{% trans "Services" %}</a></li>
-  </ul>
-  <ul class="list-unstyled">
-    <li id="footer-menu-agenda">
-      <a href="#">{% trans "Agenda" %}</a>
-    </li>
-  </ul>
-  <ul class="list-unstyled">
-    <li id="footer-menu-blog">
-      <a href="/blog/">{% trans "Blog" %}</a>
-    </li>
-  </ul>
-  <ul class="list-unstyled">
-    <li id="footer-menu-contate">
-      <a href="#">{% trans "About" %}</a>
-    </li>
-  </ul>
-</div>
-
-<div class="row">
-<p class="site-info text-center" style="font-family:Roboto;">
-    Fábrica de Ideias
-    <span class="separator">|</span>
-    Telefone: (51) 3516-2367
-    <span class="separator">|</span>
-    Rua Vigário José Inácio, 399/409
-</p>
-</div>
+  <div class="row">
+  <p class="site-info text-center" style="font-family:Roboto;">
+      Fábrica de Ideias
+      <span class="separator">|</span>
+      Telefone: (51) 3516-2367
+      <span class="separator">|</span>
+      Rua Vigário José Inácio, 399/409
+  </p>
+  </div>
 </div>
 </footer>
 
 {% include "includes/footer_scripts.html" %}
-</div>
-</div>
+
 </body>
 </html>
