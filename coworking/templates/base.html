@@ -9,13 +9,11 @@
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <style>
-@font-face { font-family: 'Montserrat'; src: url("{% static "ttf/montserrat.ttf" %}"); }
-@font-face { font-family: 'Changa One'; src: url("{% static "ttf/changaone.ttf" %}"); font-weight: bold; }
 @font-face { font-family: 'Roboto'; src: url("{% static "ttf/roboto.ttf" %}"); }
 @font-face { font-family: 'Roboto'; src: url("{% static "ttf/odinrounded.otf" %}"); font-weight: bold; }
 
 .nebula {
-    background-image:url("{% static "svg/diffuse.svg" %}");
+    background-image:url("{% static "img/coworking.jpg" %}");
     background-size:cover;
     background-repeat:no-repeat;
     background-attachment:fixed;
@@ -63,7 +61,7 @@
   </div>
 </div>
 
-<div class="jumbotron hidden">
+<div class="jumbotron hidden" style="margin-top:-50px !important;">
   <div class="container text-center">
     <img src="{% static "svg/fabrica.svg" %}" class="img-responsive" style="margin:0 auto;"/>
     <h2 style="font-size:1.5em; line-height:1.2em; padding-top:1em;">

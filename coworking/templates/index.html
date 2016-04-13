@@ -5,12 +5,8 @@
 {% block main %}
 <script>
 $(document).ready(function(){
-    $('.fixed-navbar')
-    .addClass('navbar-fixed-top')
-    .removeClass('navbar-inverse')
-    .removeClass('fixed-navbar');
-    $('.jumbotron')
-    .removeClass('hidden');
+    $('.fixed-navbar').removeClass('navbar-inverse');
+    $('.jumbotron').removeClass('hidden');
     $('#dropdown-menu-home').addClass('hidden');
     $('.navbar-brand').addClass('hidden');
 });
