@@ -5,6 +5,7 @@
 {% block main %}
 <script>
 $(document).ready(function(){
+    $('body').addClass('nebula');
     $('.fixed-navbar').removeClass('navbar-inverse');
     $('.jumbotron').removeClass('hidden');
     $('#dropdown-menu-home').addClass('hidden');
@@ -12,7 +13,6 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="container">
 <div class="row">
   <div class="col-md-offset-1 col-md-5 col-sm-6 text-right">
     <h1>Entenda o Coworking</h1>
@@ -87,5 +87,5 @@ $(document).ready(function(){
 	</div>
 	<div class="col-md-2"></div>
 </div>
-</div>
+
 {% endblock %}
