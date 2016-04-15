@@ -47,6 +47,7 @@ urlpatterns += [
     url(r'^servicos/', direct_to_template, {"template": "services.html"}, name="services"),
     url(r'^agenda/', direct_to_template, {"template": "agenda.html"}, name="agenda"),
     url(r'^sobre/', direct_to_template, {"template": "about.html"}, name="about"),
+    url(r'^parceiros/', direct_to_template, {"template": "partners.html"}, name="partners"),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------

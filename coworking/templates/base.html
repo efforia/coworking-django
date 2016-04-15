@@ -49,12 +49,13 @@
     </div>
     <div class="navbar-collapse collapse" style="border:none; box-shadow:none;">
       <ul class="nav navbar-nav" style="float:none; margin: 0 auto; display:table; table-layout:fixed;">
-        <li><a href="{% url 'coworking' %}"> {% trans "Fábrica" %}  </a></li>
+        <!--<li><a href="{% url 'coworking' %}"> {% trans "Fábrica" %}  </a></li>!-->
         <li><a href="{% url 'photos' %}">    {% trans "Photos" %}   </a></li>
         <li><a href="{% url 'pricing' %}">   {% trans "Pricing" %}  </a></li>
+        <li><a href="{% url 'partners' %}">  {% trans "Partners" %}  </a></li>
         <li><a href="{% url 'services' %}">  {% trans "Services" %} </a></li>
         <li><a href="{% url 'agenda' %}">    {% trans "Agenda" %}   </a></li>
-        <li><a href="{% url 'about' %}">     {% trans "About" %}    </a></li>
+        <!--<li><a href="{% url 'about' %}">     {% trans "About" %}    </a></li>!-->
       </ul>
       {% page_menu "pages/menus/dropdown.html" %}
     </div>
@@ -74,48 +75,44 @@
 
 <footer class="footer">
  <div class="container">
-   <div class="nav-footer">
-    <ul class="list-unstyled">
-      <li id="footer-menu-coworking"><a href="#">{% trans "Coworking" %}</a></li>
-      <li id="footer-menu-lab"><a href="http://lab.fabricadeideiascw.com.br">{% trans "Lab" %}</a></li>
-      <li id="footer-menu-hub"><a href="http://hub.fabricadeideiascw.com.br">{% trans "Hub" %}</a></li>
-    </ul>
-    <ul class="list-unstyled">
-      <li id="footer-menu-fotos">
-        <a href="#">{% trans "Photos" %}</a>
-      </li>
-    </ul>
-    <ul class="list-unstyled">
-      <li id="footer-menu-precos"><a href="#">{% trans "Pricing" %}</a></li>
-      <li id="footer-menu-servicos"><a href="#">{% trans "Services" %}</a></li>
-    </ul>
-    <ul class="list-unstyled">
-      <li id="footer-menu-agenda">
-        <a href="#">{% trans "Agenda" %}</a>
-      </li>
-    </ul>
-    <ul class="list-unstyled">
-      <li id="footer-menu-blog">
-        <a href="/blog/">{% trans "Blog" %}</a>
-      </li>
-    </ul>
-    <ul class="list-unstyled">
-      <li id="footer-menu-contate">
-        <a href="#">{% trans "About" %}</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="row">
-  <p class="site-info text-center" style="font-family:Roboto;">
-      Fábrica de Ideias
-      <span class="separator">|</span>
-      Telefone: (51) 3516-2367
-      <span class="separator">|</span>
-      Rua Vigário José Inácio, 399/409
-  </p>
-  </div>
-</div>
+   <div class="row">
+     <div class="col-md-12 middle">
+       <div style="text-align: right;" class="col-md-6">
+         <h1>Onde ficamos?</h1>
+         <p>Ficamos na Vigário José Inácio, bem ao centro de Porto Alegre.</p>
+         <iframe scrolling="no" src="https://www.google.com/maps?t=m&amp;q=R.+Vig%C3%A1rio+Jos%C3%A9+In%C3%A1cio,+355+-+Centro,+Porto+Alegre+-+RS,+90020-110,+Rep%C3%BAblica+Federativa+do+Brasil&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Vig%C3%A1rio+Jos%C3%A9+In%C3%A1cio,+355+-+Centro,+Porto+Alegre+-+Rio+Grande+do+Sul,+90020-110,+Rep%C3%BAblica+Federativa+do+Brasil&amp;z=14&amp;ll=-30.028551,-51.225636&amp;output=embed" marginwidth="0" marginheight="0" frameborder="0" height="180" width="100%"></iframe><br><small><a style="color: #0000ff; text-align: left;" href="https://www.google.com/maps?t=m&amp;q=R.+Vig%C3%A1rio+Jos%C3%A9+In%C3%A1cio,+355+-+Centro,+Porto+Alegre+-+RS,+90020-110,+Rep%C3%BAblica+Federativa+do+Brasil&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Vig%C3%A1rio+Jos%C3%A9+In%C3%A1cio,+355+-+Centro,+Porto+Alegre+-+Rio+Grande+do+Sul,+90020-110,+Rep%C3%BAblica+Federativa+do+Brasil&amp;z=14&amp;ll=-30.028551,-51.225636&amp;source=embed">Exibir mapa ampliado</a></small>
+         <div style="color: black;"></div>
+         <b><b></b></b>
+       </div>
+       <div class="col-md-6">
+         <h1>Fábrica de Ideias</h1>
+         O primeiro ambiente coletivo 24h do RS <br>
+         Rua Vigário José Inácio, 399/409 - Porto Alegre - RS <br>
+         <a style="text-decoration: none; color: black;" href="mailto:contato@fabricadeideiascw.com.br">contato@fabricadeideiascw.com.br</a><br>
+         Telefone: +5551 3516-2367<br>
+         Celular 1: +5551 9848-5888 ( William )<br>
+         Celular 2: +5551 9959-9355 ( Aida )<br>
+         Horário de funcionamento comercial:<br>
+         <b>Segunda a sexta-feira, das 9h às 19h<b><br>
+         <a href="https://www.facebook.com/Fabricadeideiascw?ref=ts&amp;fref=ts">
+           <img src="https://fabricadeideias.s3.amazonaws.com/svg/facebook.svg" style="margin-left: 0em;" class="rounded-icon" height="70" width="70">
+         </a>
+         <a href="https://twitter.com/fabricaideiascw">
+           <img src="https://fabricadeideias.s3.amazonaws.com/svg/twitter.svg" class="rounded-icon" height="70" width="70">
+         </a>
+         <a href="https://plus.google.com/u/0/114229628763368667145/posts">
+           <img src="https://fabricadeideias.s3.amazonaws.com/img/google.png" class="rounded-icon" height="70" width="70">
+         </a>
+         <a href="https://pt.foursquare.com/v/f%C3%A1brica-de-ideias-coworking--escrit%C3%B3rio-compartilhado/507e0c1a64a41ea912010f7c">
+           <img src="https://fabricadeideias.s3.amazonaws.com/svg/foursquare.svg" class="rounded-icon" height="70" width="70">
+         </a>
+         <a href="https://github.com/fabricadeideiascw">
+           <img src="https://fabricadeideias.s3.amazonaws.com/svg/github.svg" class="rounded-icon" height="70" width="70">
+         </a><br><br></b></b>
+       </div>
+     </div>
+   </div>
+ </div>
 </footer>
 
 {% include "includes/footer_scripts.html" %}
