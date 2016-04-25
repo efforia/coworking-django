@@ -45,6 +45,7 @@ urlpatterns += [
     url(r'^fotos/', direct_to_template, {"template": "photos.html"}, name="photos"),
     url(r'^planos/', direct_to_template, {"template": "pricing.html"}, name="pricing"),
     url(r'^servicos/', direct_to_template, {"template": "services.html"}, name="services"),
+    url(r'^mentoria/', direct_to_template, {"template": "services.html"}, name="services"),
     url(r'^agenda/', direct_to_template, {"template": "agenda.html"}, name="agenda"),
     url(r'^sobre/', direct_to_template, {"template": "about.html"}, name="about"),
     url(r'^parceiros/', direct_to_template, {"template": "partners.html"}, name="partners"),
