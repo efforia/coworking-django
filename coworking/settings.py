@@ -110,7 +110,7 @@ USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "pt"
 
 # Supported languages
 LANGUAGES = (
@@ -316,11 +316,11 @@ OPTIONAL_APPS = (
 # local_settings has full access to everything defined in this module.
 # Also force into sys.modules so it's visible to Django's autoreload.
 
-f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
+f = os.path.join(PROJECT_APP_PATH, "staging.py")
 if os.path.exists(f):
     import sys
     import imp
-    module_name = "%s.local_settings" % PROJECT_APP
+    module_name = "%s.staging" % PROJECT_APP
     module = imp.new_module(module_name)
     module.__file__ = f
     sys.modules[module_name] = module

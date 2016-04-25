@@ -4,6 +4,7 @@ from django.conf.urls import include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.views.i18n import set_language
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
@@ -110,5 +111,7 @@ urlpatterns += [
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
+urlpatterns += staticfiles_urlpatterns()
+
 handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"
