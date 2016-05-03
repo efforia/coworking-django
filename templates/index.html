@@ -13,7 +13,7 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="row text-center" style="padding:3%">
+<div class="row text-center" style="padding-top:3%">
   <div class="col-md-3 col-sm-6" style="background-color:white;">
     <div href="#" class="black">
       <img src="{% static "svg/clock.svg" %}" width="60%"/>
@@ -34,7 +34,7 @@ $(document).ready(function(){
       </p><br>
 		</div>
 	</div>
-	<div class="col-md-3 col-sm-6" style="background-color:white;">
+	<div class="col-md-3 hidden-sm" style="background-color:white;">
     <div href="#" class="black">
       <img src="{% static "svg/house.svg" %}" width="60%"/>
 	    <br><br><h2>Boa Estrutura</h2>
@@ -44,7 +44,7 @@ $(document).ready(function(){
       </p><br>
 		</div>
 	</div>
-	<div class="col-md-3 col-sm-6" style="background-color:white;">
+	<div class="col-md-3 hidden-sm" style="background-color:white;">
     <div href="#" class="black">
       <img src="{% static "svg/idea.svg" %}" width="60%"/>
 		  <br><br><h2>Ponto das Ideias</h2>
@@ -53,6 +53,25 @@ $(document).ready(function(){
         estrutura para desenvolvimento.
       </p><br>
 		</div>
+	</div>
+</div>
+
+<div class="row visible-sm text-center">
+  <div class="col-sm-6">
+    <img src="{% static "svg/house.svg" %}" width="60%"/>
+    <br><br><h2>Boa Estrutura</h2>
+    <p style="font-size:1.2em">A Fábrica fica localizada bem no coração da
+      cidade de Porto Alegre, bem fácil de acessar e de receber nossos membros
+      num ambiente completamente preparado para negócios.
+    </p><br>
+	</div>
+	<div class="col-sm-6">
+    <img src="{% static "svg/idea.svg" %}" width="60%"/>
+	  <br><br><h2>Ponto das Ideias</h2>
+	  <p style="font-size:1.2em">O espaço é aberto para criação de negócios e
+      produtos, especialmente de base tecnológica, contando com parceiros e
+      estrutura para desenvolvimento.
+    </p><br>
 	</div>
 </div>
 
