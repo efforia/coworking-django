@@ -1,0 +1,18 @@
+version: '2'
+services:
+  db:
+    image: postgres
+    external_links: 
+      - db:postgres
+  coworking:
+    image: efforia/mezzanine
+    command: bash -c "python manage.py migrate --settings=\"coworking.production\" && gunicorn coworking.wsgi -b 0.0.0.0:8000"
+    working_dir: /app 
+    volumes:
+      - .:/app/
+    ports:
+      - "8000:8000"
+    links:
+      - db
+    depends_on:
+      - db

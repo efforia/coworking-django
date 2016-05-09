@@ -1,11 +1,6 @@
-# This file is exec'd from settings.py, so it has access to and can
-# modify all the variables in settings.py.
+from coworking.settings import *
 
-# If this file is changed in development, the development server will
-# have to be manually restarted because changes will not be noticed
-# immediately.
-
-DEBUG = True
+DEBUG = False
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "qj@*uxslwnu77y*@yv12$4@12$$7_5!)276&aohn$3c2kj=hjs"
@@ -14,17 +9,17 @@ NEVERCACHE_KEY = "_71ak9!4$&v$w2=*!3%^e!h9o4ac@^$gecykhf5-4%+t1=jn!k"
 DATABASES = {
     "default": {
         # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         # DB name or path to database file if using sqlite3.
-        "NAME": "coworking.db",
+        "NAME": "postgres",
         # Not used with sqlite3.
-        "USER": "",
+        "USER": "postgres",
         # Not used with sqlite3.
         "PASSWORD": "",
         # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "",
+        "HOST": "db",
         # Set to empty string for default. Not used with sqlite3.
-        "PORT": "",
+        "PORT": "5432",
     }
 }
 
