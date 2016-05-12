@@ -54,9 +54,8 @@
         <li><a href="{% url 'partners' %}">  Coworkers </a></li>
         <li><a href="{% url 'services' %}">  Apoio     </a></li>
         <li><a href="{% url 'agenda' %}">    Eventos    </a></li>
-        <!--<li><a href="{% url 'about' %}">     {% trans "About" %}    </a></li>!-->
+        {% page_menu "pages/menus/dropdown.html" %}
       </ul>
-      {% page_menu "pages/menus/dropdown.html" %}
     </div>
   </div>
 </div>
