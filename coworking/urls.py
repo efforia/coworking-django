@@ -43,7 +43,7 @@ urlpatterns += [
     # STATIC TEMPLATE PAGES
 
     url(r'^coworking/', direct_to_template, {"template": "coworking.html"}, name="coworking"),
-    url(r'^fotos/', direct_to_template, {"template": "photos.html"}, name="photos"),
+    url(r'^photos/', direct_to_template, {"template": "photos.html"}, name="photos"),
     url(r'^planos/', direct_to_template, {"template": "pricing.html"}, name="pricing"),
     url(r'^servicos/', direct_to_template, {"template": "services.html"}, name="services"),
     url(r'^mentoria/', direct_to_template, {"template": "services.html"}, name="services"),
