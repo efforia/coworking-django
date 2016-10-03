@@ -18,6 +18,10 @@
     background-repeat:no-repeat;
     background-attachment:fixed;
 }
+.row {
+    margin-top:15px;
+    margin-bottom:15px;
+}
 </style>
 <title>Fábrica de Ideias Coworking</title>
 <link rel="shortcut icon" href="{% static "img/fabricalogo.png" %}">
@@ -52,7 +56,7 @@
         <!--<li><a href="{% url 'photos' %}">    Fotos     </a></li>--!>
         <li><a href="{% url 'pricing' %}">   Valores   </a></li>
         <li><a href="{% url 'partners' %}">  Coworkers </a></li>
-        <li><a href="{% url 'services' %}">  Apoio     </a></li>
+        <!--<li><a href="{% url 'services' %}">  Apoio     </a></li>!-->
         <li><a href="{% url 'agenda' %}">    Eventos    </a></li>
         {% page_menu "pages/menus/dropdown.html" %}
       </ul>
