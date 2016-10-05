@@ -14,7 +14,7 @@ $(document).ready(function(){
 </script>
 
 <div class="row text-center" style="padding-top:1.5%; padding-bottom:1.5%">
-  <div class="col-md-3 col-sm-6" style="background-color:white;">
+  <div class="col-lg-offset-2 col-lg-2 col-md-3 col-sm-6" style="background-color:white;">
     <div href="#" class="black">
       <img src="{% static "svg/clock.svg" %}" width="60%"/>
       <br><br><h3>Aberto toda hora</h3>
@@ -23,7 +23,7 @@ $(document).ready(function(){
       </p><br>
 		</div>
 	</div>
-	<div class="col-md-3 col-sm-6" style="background-color:white;">
+	<div class="col-lg-2 col-md-3 col-sm-6" style="background-color:white;">
     <div href="#" class="black">
       <img src="{% static "svg/pig.svg" %}" width="60%"/>
 	    <br><br><h3>Flexível</h3>
@@ -32,7 +32,7 @@ $(document).ready(function(){
       </p><br>
 		</div>
 	</div>
-	<div class="col-md-3 hidden-sm" style="background-color:white;">
+	<div class="col-lg-2 col-md-3 hidden-sm" style="background-color:white;">
     <div href="#" class="black">
       <img src="{% static "svg/house.svg" %}" width="60%"/>
 	    <br><br><h3>Bem Localizado</h3>
@@ -41,7 +41,7 @@ $(document).ready(function(){
       </p><br>
 		</div>
 	</div>
-	<div class="col-md-3 hidden-sm" style="background-color:white;">
+	<div class="col-lg-2 col-md-3 hidden-sm" style="background-color:white;">
     <div href="#" class="black">
       <img src="{% static "svg/idea.svg" %}" width="60%"/>
 		  <br><br><h3>Ponto das Ideias</h3>
@@ -56,23 +56,20 @@ $(document).ready(function(){
   <div class="col-sm-6">
     <img src="{% static "svg/house.svg" %}" width="60%"/>
     <br><br><h3>Boa Estrutura</h3>
-    <p>A Fábrica fica localizada bem no coração da
-      cidade de Porto Alegre, bem fácil de acessar e de receber nossos membros
-      num ambiente completamente preparado para negócios.
+    <p>Estamos no Centro Histórico, no coração de POA, fácil de acessar e de receber clientes.
     </p><br>
 	</div>
 	<div class="col-sm-6">
     <img src="{% static "svg/idea.svg" %}" width="60%"/>
 	  <br><br><h3>Ponto das Ideias</h3>
 	  <p>O espaço é aberto para criação de negócios e
-      produtos, especialmente de base tecnológica, contando com parceiros e
-      estrutura para desenvolvimento.
+      produtos, especialmente de base tecnológica.
     </p><br>
 	</div>
 </div>
 
-<div class="row">
-  <div class="col-md-offset-1 col-md-5 col-sm-6 text-right">
+<div style="display:none;" class="row">
+  <div class="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-5 col-sm-6 text-right">
     <h3>Entenda o Coworking</h3>
     <p style="font-size: 1em; line-height: 2em;">No Coworking, profissionais
       de diversas &aacute;reas, microempresas, empreendedores
@@ -81,28 +78,29 @@ $(document).ready(function(){
       beneficiar com o uso comum da infraestrutura, diminuindo seus custos. 
     </p>
   </div>
-  <div class="col-md-4 col-sm-6 text-left">
+  <div class="col-lg-4 col-md-4 col-sm-6 text-left">
     <br><p><iframe width="100%" height="200" src="http://www.youtube.com/embed/BEhubwgjl6s" frameborder="0"></iframe></p>
   </div>
 </div>
 
-<div class="row" style="padding:1.5%">
-  <div class="col-md-offset-1 col-md-5 text-right">
-    <h3>Coworking na Fábrica</h3>
-    <p style="font-size: 1em; line-height: 2em;">Temos na Fábrica de Ideias Coworking o 
-    reconhecido bom atendimento e opções de cursos, oficinas e eventos durante todo ano. 
-    Há assim uma comunidade ativa, onde você faz networking com empreendedores e 
-    profissionais, e ainda trabalha em um ambiente inspirador, criativo e colaborativo, 
-    muito bom para a criação de novos negócios.</p>
+<div class="row" style="padding-bottom:1.5%">
+  <div class="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-5 text-center">
     <h3>Quer conhecer?</h3>
     <p style="font-size:1em; line-height: 2em;">Converse com a gente por
       <a href="mailto:ola@fabricadeideiascw.com.br">ola@fabricadeideiascw.com.br</a>
       e marque uma visita durante a semana. Vamos recebê-lo com um bom café, chá ou chimarrão.
     </p>
+    <img class="img-responsive center-block" style="width:15%" src="{% static 'svg/factory.svg' %}"/>
+    <h3>Coworking na Fábrica</h3>
+    <p style="font-size: 1em; line-height: 2em;">Temos aqui um bom atendimento e opções 
+    de cursos, oficinas e eventos durante todo ano. Há assim uma comunidade ativa, onde 
+    você faz networking com empreendedores e profissionais, e ainda trabalha em um ambiente 
+    inspirador, criativo e colaborativo, muito bom para a criação de novos negócios.</p>
 	</div>
-  <div class="col-md-6">
+  <div class="col-lg-4 col-md-5 text-center">
     <h3>Vantagens</h3>
-    <div style="font-size: 1em; line-height: 2em;">
+    <img class="img-responsive" src="{% static 'svg/advantages.svg' %}"/>
+    <div style="display:none; font-size: 1em; line-height: 2em;">
       <p><span class="glyphicon glyphicon-map-marker">&nbsp;</span>Espaço bem localizado, próximo ao centro</p>
       <p><span class="glyphicon glyphicon-ok">&nbsp;</span>Coworking pronto para trabalho</p>
       <p><span class="glyphicon glyphicon-globe">&nbsp;</span>Internet 50M, material e armários</p>

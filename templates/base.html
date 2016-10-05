@@ -34,7 +34,7 @@
 
 <body class="full">
 
-<div class="navbar fixed-navbar navbar-inverse">
+<div class="navbar fixed-navbar navbar-inverse hidden-xs" style="background:rgba(0,0,0,0.75)">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -60,12 +60,16 @@
   </div>
 </div>
 
-<div class="jumbotron hidden" style="margin-top:-50px !important;">
+<div class="jumbotron hidden">
   <div class="container text-center">
-    <img src="{% static "svg/fabrica.svg" %}" class="img-responsive" style="margin:0 auto;"/>
-    <h2 style="font-size:1.5em; line-height:1.2em; padding-top:1em;">
-      Somos um ambiente coletivo acolhedor, pensado todo em receber
-      você como se estivesse na sua casa.<br></h2>
+    <img src="{% static "svg/fabrica.svg" %}" class="hidden-xs img-responsive center-block" style="width:20%; margin:0 auto;"/>
+    <img src="{% static "svg/fabrica.svg" %}" class="visible-xs img-responsive center-block" style="width:30%; margin:0 auto;"/>
+    <h2 style="font-size:2em; line-height:1.2em; padding-top:1em;">
+      Somos a Fábrica de Ideias Coworking, um ambiente coletivo completamente acolhedor.<br></h2>
+    <button class="btn btn-default btn-lg" onclick="window.location='http://www.youtube.com/watch/BEhubwgjl6s'"style="margin-top:2em; background:transparent; color:white; border: 1px solid white;">
+	<h2 class="hidden-xs" style="font-size:1.5em; margin:0px">Saiba mais o que é o coworking</h2>
+	<h2 class="visible-xs" style="font-size:1.5em; margin:0px">Saiba mais</h2>
+    </button>
   </div>
 </div>
 
