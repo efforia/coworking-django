@@ -9,6 +9,7 @@ services:
     working_dir: /app 
     container_name: coworking
     network_mode: "efforia"
+    restart: always
     volumes:
       - ..:/app/
     external_links:
