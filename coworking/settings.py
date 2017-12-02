@@ -132,7 +132,7 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = False
 
-AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
+# AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 
 # The numeric mode to set newly-uploaded files to. The value should be
 # a mode you'd pass directly to os.chmod.
@@ -183,7 +183,9 @@ STATIC_URL = "/static/"
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+STATIC_ROOT = os.path.join(os.path.join(PROJECT_ROOT, "coworking"),STATIC_URL.strip("/"))
+
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -194,6 +196,8 @@ MEDIA_URL = STATIC_URL + "media/"
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Package/module name to import the root urlpatterns from for the project.
 ROOT_URLCONF = "%s.urls" % PROJECT_APP
 
@@ -201,7 +205,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            os.path.join(PROJECT_ROOT, "templates")
+            os.path.join(os.path.join(PROJECT_ROOT, "coworking"),"templates")
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -214,12 +218,12 @@ TEMPLATES = [
                 "django.template.context_processors.media",
                 "django.template.context_processors.request",
                 "django.template.context_processors.tz",
-                "mezzanine.conf.context_processors.settings",
-                "mezzanine.pages.context_processors.page",
+                # "mezzanine.conf.context_processors.settings",
+                # "mezzanine.pages.context_processors.page",
             ],
-            "builtins": [
-                "mezzanine.template.loader_tags",
-            ],
+            # "builtins": [
+                # "mezzanine.template.loader_tags",
+            # ],
         },
     },
 ]
@@ -245,15 +249,15 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
-    "mezzanine.boot",
-    "mezzanine.conf",
-    "mezzanine.core",
-    "mezzanine.generic",
-    "mezzanine.pages",
-    "mezzanine.blog",
-    "mezzanine.forms",
-    "mezzanine.galleries",
-    "mezzanine.twitter",
+    # "mezzanine.boot",
+    # "mezzanine.conf",
+    # "mezzanine.core",
+    # "mezzanine.generic",
+    # "mezzanine.pages",
+    # "mezzanine.blog",
+    # "mezzanine.forms",
+    # "mezzanine.galleries",
+    # "mezzanine.twitter",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
 )
@@ -262,7 +266,7 @@ INSTALLED_APPS = (
 # these middleware classes will be applied in the order given, and in the
 # response phase the middleware will be applied in reverse order.
 MIDDLEWARE_CLASSES = (
-    "mezzanine.core.middleware.UpdateCacheMiddleware",
+    # "mezzanine.core.middleware.UpdateCacheMiddleware",
 
     'django.contrib.sessions.middleware.SessionMiddleware',
     # Uncomment if using internationalisation or localisation
@@ -274,22 +278,23 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    "mezzanine.core.request.CurrentRequestMiddleware",
-    "mezzanine.core.middleware.RedirectFallbackMiddleware",
-    "mezzanine.core.middleware.TemplateForDeviceMiddleware",
-    "mezzanine.core.middleware.TemplateForHostMiddleware",
-    "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
-    "mezzanine.core.middleware.SitePermissionMiddleware",
+    # "mezzanine.core.request.CurrentRequestMiddleware",
+    # "mezzanine.core.middleware.RedirectFallbackMiddleware",
+    # "mezzanine.core.middleware.TemplateForDeviceMiddleware",
+    # "mezzanine.core.middleware.TemplateForHostMiddleware",
+    # "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
+    # "mezzanine.core.middleware.SitePermissionMiddleware",
     # Uncomment the following if using any of the SSL settings:
     # "mezzanine.core.middleware.SSLRedirectMiddleware",
-    "mezzanine.pages.middleware.PageMiddleware",
-    "mezzanine.core.middleware.FetchFromCacheMiddleware",
+    # "mezzanine.pages.middleware.PageMiddleware",
+    # "mezzanine.core.middleware.FetchFromCacheMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 )
 
 # Store these package names here as they may change in the future since
 # at the moment we are using custom forks of them.
-PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
-PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
+# PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
+# PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
 
 #########################
 # OPTIONAL APPLICATIONS #
@@ -300,8 +305,8 @@ OPTIONAL_APPS = (
     "debug_toolbar",
     "django_extensions",
     "compressor",
-    PACKAGE_NAME_FILEBROWSER,
-    PACKAGE_NAME_GRAPPELLI,
+    # PACKAGE_NAME_FILEBROWSER,
+    # PACKAGE_NAME_GRAPPELLI,
 )
 
 ####################
@@ -314,9 +319,9 @@ OPTIONAL_APPS = (
 # without Mezzanine installed, as the case may be when using the
 # fabfile, where setting the dynamic settings below isn't strictly
 # required.
-try:
-    from mezzanine.utils.conf import set_dynamic_settings
-except ImportError:
-    pass
-else:
-    set_dynamic_settings(globals())
+# try:
+    # from mezzanine.utils.conf import set_dynamic_settings
+# except ImportError:
+    # pass
+# else:
+    # set_dynamic_settings(globals())

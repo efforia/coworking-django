@@ -1,13 +1,15 @@
 from __future__ import unicode_literals
 
+from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.views.i18n import set_language
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic import TemplateView
 
-from mezzanine.core.views import direct_to_template
-from mezzanine.conf import settings
+# from mezzanine.core.views import direct_to_template
+# from mezzanine.conf import settings
 
 
 admin.autodiscover()
@@ -38,18 +40,18 @@ urlpatterns += [
     # one homepage pattern, so if you use a different one, comment this
     # one out.
 
-    url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    url("^$", TemplateView.as_view(template_name="index.html"), name="home"),
 
     # STATIC TEMPLATE PAGES
 
-    url(r'^coworking/', direct_to_template, {"template": "coworking.html"}, name="coworking"),
-    url(r'^photos/', direct_to_template, {"template": "photos.html"}, name="photos"),
-    url(r'^planos/', direct_to_template, {"template": "pricing.html"}, name="pricing"),
-    url(r'^servicos/', direct_to_template, {"template": "services.html"}, name="services"),
-    url(r'^mentoria/', direct_to_template, {"template": "services.html"}, name="services"),
-    url(r'^agenda/', direct_to_template, {"template": "agenda.html"}, name="agenda"),
-    url(r'^sobre/', direct_to_template, {"template": "about.html"}, name="about"),
-    url(r'^parceiros/', direct_to_template, {"template": "partners.html"}, name="partners"),
+    url(r'^coworking/', TemplateView.as_view(template_name="coworking.html"), name="coworking"),
+    url(r'^photos/', TemplateView.as_view(template_name="photos.html"), name="photos"),
+    url(r'^planos/', TemplateView.as_view(template_name="pricing.html"), name="pricing"),
+    url(r'^servicos/', TemplateView.as_view(template_name="services.html"), name="services"),
+    url(r'^mentoria/', TemplateView.as_view(template_name="services.html"), name="services"),
+    url(r'^agenda/', TemplateView.as_view(template_name="agenda.html"), name="agenda"),
+    url(r'^sobre/', TemplateView.as_view(template_name="about.html"), name="about"),
+    url(r'^parceiros/', TemplateView.as_view(template_name="partners.html"), name="partners"),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
@@ -89,7 +91,7 @@ urlpatterns += [
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
-    url("^", include("mezzanine.urls")),
+    # url("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
     # ---------------------------------
@@ -113,5 +115,5 @@ urlpatterns += [
 # pages can use JS, CSS and images.
 urlpatterns += staticfiles_urlpatterns()
 
-handler404 = "mezzanine.core.views.page_not_found"
-handler500 = "mezzanine.core.views.server_error"
+# handler404 = "mezzanine.core.views.page_not_found"
+# handler500 = "mezzanine.core.views.server_error"

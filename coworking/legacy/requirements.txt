@@ -1,0 +1,5 @@
+Django==1.9.5
+Pillow==3.2.0
+Mezzanine==4.1.0
+Cartridge==0.11.0
+Gunicorn==19.4.5
