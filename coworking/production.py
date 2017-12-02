@@ -12,7 +12,7 @@ DATABASES = {
         "NAME": "fabrica",
         "USER": "root",
         "PASSWORD": "mk28to#$",
-        "HOST": "localhost",
+        "HOST": "database",
         "PORT": "3306",
     }
 }
