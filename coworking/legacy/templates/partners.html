@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load i18n %}
+{% block title %} {% endblock %}
+{% block main %}
+
+<style>
+.coworker,.bar {
+  font-size:1.25em;
+  line-height:1.25em;
+}
+.partners img { width:100% !important; }
+.clients img { width:90% !important;}
+</style>
+
+<div class="container clients">
+  <div class="row text-center">
+    <div class="col-md-12">
+      <h2>Estes são os nossos coworkers:</h2>
+      <div class="col-md-4 col-sm-4">
+        <img src="{% static "svg/arquitetura.svg" %}"/>
+        <p class="coworker">NOEMI FERREIRA<br>ESCRITÓRIO DE ARQUITETURA</p>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <img src="{% static "svg/engenharia.svg" %}"/>
+        <p class="coworker">ENGENHARIA<br>FERNANDA RIBAS</p>
+      </div>
+    <!--</div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-12">!-->
+      <div class="col-md-4 col-sm-4">
+        <img src="{% static "svg/efforia.svg" %}"/>
+        <p class="coworker">EFFORIA INVENT COMPANY<br>FÁBRICA DE SOFTWARE</p>
+      </div>
+      <!--<div class="col-md-4 col-sm-4">
+        <img src="{% static "svg/genese.svg" %}"/>
+        <p class="coworker">VRANA<br>HUB</p>
+      </div>!-->
+    </div>
+  </div>
+</div>
+
+<p><br><br></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 partners">
+      <h2 style="text-align:right">A nossa rede de parceiros</h2>
+      <div class="col-md-4 col-sm-6"><img src="{% static "img/convexo.jpg" %}"></div>
+      <div class="col-md-4 col-sm-6"><img src="{% static "img/rosa.png" %}"></div>
+      <div class="col-md-4 col-sm-6"><img src="{% static "img/mesa.png" %}"></div>
+      <div class="col-md-4 col-sm-6"><img src="{% static "img/crars.jpg" %}"></div>
+      <div class="col-md-4 col-sm-6"><img src="{% static "img/bizspark.png" %}"></div>
+      <div class="col-md-4 col-sm-6"><img src="{% static "img/logo-uniritter.jpg" %}"></div>
+    </div>
+    <div class="col-md-6 col-sm-6 middle">
+      <h2 class="left">Com uma série de vantagens</h1>
+      <p class="bar">Hardwares, softwares e nuvem gratuitos</p>
+      <p class="bar">Acesso a eventos e oficinas da Fábrica de Ideias</p>
+      <p class="bar">Apoio para crescimento do negócio</p>
+      <p class="bar">Coworking para desenvolver o negócio</p>
+      <p class="bar">Microlaboratório para criar novos produtos</p>
+    </div>
+  </div>
+</div>
+
+<p><br><br></p>
+
+{% endblock %}
