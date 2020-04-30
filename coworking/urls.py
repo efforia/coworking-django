@@ -20,20 +20,24 @@ admin.autodiscover()
     # url("^admin/", include(admin.site.urls)),
 # )
 
+from django_distill import distill_url
+
+def getNone(): return None
+
 urlpatterns = [
     url("^admin/", include(admin.site.urls)),
-    url("^$", TemplateView.as_view(template_name="index.html"), name="home"),
+    distill_url("^$", TemplateView.as_view(template_name="index.html"), name="home", distill_func=getNone),
 
     # STATIC TEMPLATE PAGES
 
-    url(r'^coworking/', TemplateView.as_view(template_name="coworking.html"), name="coworking"),
-    url(r'^fotos/', TemplateView.as_view(template_name="photos.html"), name="photos"),
-    url(r'^planos/', TemplateView.as_view(template_name="pricing.html"), name="pricing"),
-    url(r'^servicos/', TemplateView.as_view(template_name="services.html"), name="services"),
-    url(r'^mentoria/', TemplateView.as_view(template_name="services.html"), name="services"),
-    url(r'^agenda/', TemplateView.as_view(template_name="agenda.html"), name="agenda"),
-    url(r'^sobre/', TemplateView.as_view(template_name="about.html"), name="about"),
-    url(r'^parceiros/', TemplateView.as_view(template_name="partners.html"), name="partners"),
+    distill_url(r'^coworking/', TemplateView.as_view(template_name="coworking.html"), name="coworking", distill_func=getNone),
+    distill_url(r'^fotos/', TemplateView.as_view(template_name="photos.html"), name="photos", distill_func=getNone),
+    distill_url(r'^planos/', TemplateView.as_view(template_name="pricing.html"), name="pricing", distill_func=getNone),
+    distill_url(r'^servicos/', TemplateView.as_view(template_name="services.html"), name="services", distill_func=getNone),
+    distill_url(r'^mentoria/', TemplateView.as_view(template_name="services.html"), name="services", distill_func=getNone),
+    distill_url(r'^agenda/', TemplateView.as_view(template_name="agenda.html"), name="agenda", distill_func=getNone),
+    distill_url(r'^sobre/', TemplateView.as_view(template_name="about.html"), name="about", distill_func=getNone),
+    distill_url(r'^parceiros/', TemplateView.as_view(template_name="partners.html"), name="partners", distill_func=getNone),
 
 ]
 
