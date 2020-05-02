@@ -1,6 +1,6 @@
 from coworking.settings import *
 
-DEBUG = True
+DEBUG = False
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "qj@*uxslwnu77y*@yv12$4@12$$7_5!)276&aohn$3c2kj=hjs"
