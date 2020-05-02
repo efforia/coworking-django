@@ -25,7 +25,7 @@ from django_distill import distill_url
 def getNone(): return None
 
 urlpatterns = [
-    url("^admin/", include(admin.site.urls)),
+    # url("^admin/", include(admin.site.urls)),
     distill_url("^$", TemplateView.as_view(template_name="index.html"), name="home", distill_func=getNone),
 
     # STATIC TEMPLATE PAGES
